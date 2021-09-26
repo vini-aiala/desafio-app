@@ -1,0 +1,49 @@
+.container {
+  width: 100%;
+}
+
+.tabela {
+  width: 100%;
+  border-spacing: 0 5px;
+}
+
+.linha {
+  cursor: pointer;
+}
+
+.linha:hover {
+  background-color: lightgray;
+}
+
+.nome {
+  border-left: 5px solid;
+}
+
+.categoria {
+  display: flex;
+  justify-content: flex-end;
+  border-right: solid lightgray 1px;
+}
+
+.item {
+  padding: 16px;
+  border-top: solid lightgray 1px;
+  border-bottom: solid lightgray 1px;
+}
+
+
+.NOT_ANSWERED{
+  border-left-color: #fa5457;
+}
+
+.ANSWERED{
+  border-left-color: #f6d51f;
+}
+
+.SOLVED{
+  border-left-color: #5fa55a;
+}
+
+.CLOSED{
+  border-left-color: #215f1a;
+}
