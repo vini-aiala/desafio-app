@@ -1,0 +1,8 @@
+.container {
+  min-height: 300px;
+  background-color: #303030;
+  padding: 60px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
