@@ -1,0 +1,27 @@
+.container {
+  padding: 7px;
+  border-radius: 15px;
+}
+
+.label {
+  font-weight: 400;
+}
+
+.INFRA_DEVOPS {
+  background-color: #c2c6e3;
+}
+.BACKEND {
+  background-color: #01b4bc;
+}
+.FRONTEND {
+  background-color: #fa8925;
+}
+.DATA {
+  background-color: #f6d51f;
+}
+.SCRIPTING {
+  background-color: #5fa55a;
+}
+.PROJECT_MANAGEMENT {
+  background-color: #fa5457;
+}
