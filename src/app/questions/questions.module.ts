@@ -4,11 +4,13 @@ import { QuestionsListComponent } from './questions-list/questions-list.componen
 import {MatPaginatorIntl, MatPaginatorModule} from "@angular/material/paginator";
 import {MyCustomPaginatorIntl} from "./questions-list/paginator/custom-paginator";
 import {PaginatorComponent} from "./questions-list/paginator/paginator.component";
+import { QuestionDetailsComponent } from './question-details/question-details.component';
 
 @NgModule({
   declarations: [
     QuestionsListComponent,
-    PaginatorComponent
+    PaginatorComponent,
+    QuestionDetailsComponent
   ],
     imports: [
         CommonModule,

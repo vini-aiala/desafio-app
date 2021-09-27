@@ -18,4 +18,8 @@ export class QuestionService {
     // return this.http.get(API + `/question`,  {params: {subjectId: 3, page: 0, size: 2}})
     return this.http.get<QuestionPage>(`${API}/question?subjectId=${id}&page=${page}&size=${size}`)
   }
+
+  getQuestionById(id:number) {
+    return this.http.get<Question>(`${API}/question/${id}`)
+  }
 }

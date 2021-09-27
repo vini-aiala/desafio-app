@@ -1,8 +1,8 @@
 <div class="container">
-  <h1 (click)="test()">Questões</h1>
+  <h1>Questões</h1>
   <app-paginator [tamanho]="totalElements" [tam_pag]="pageSize" [pag]="pageIndex" (onPageChange)="updatePage($event)"></app-paginator>
   <table class="tabela">
-    <tr class="linha" *ngFor="let question of questions" >
+    <tr class="linha" (click)="redirectQuest(question.id)" *ngFor="let question of questions" >
       <td class="item nome {{question.status}}">{{question.title}}</td>
       <td class="item categoria">{{STATUS[question.status]}}</td>
     </tr>

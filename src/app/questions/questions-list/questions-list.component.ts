@@ -52,7 +52,7 @@ export class QuestionsListComponent implements OnInit {
     this.getPage();
   }
 
-  test() {
-    console.log(this.pageIndex);
+  redirectQuest(id: number): void {
+    this.router.navigate(["/question/"+id])
   }
 }
