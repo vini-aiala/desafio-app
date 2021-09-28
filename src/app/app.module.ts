@@ -8,6 +8,7 @@ import {UiModule} from "./ui/ui.module";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {SubjectsModule} from "./subjects/subjects.module";
 import {QuestionsModule} from "./questions/questions.module";
+import {AuthModule} from "./auth/auth.module";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {QuestionsModule} from "./questions/questions.module";
     UiModule,
     MatToolbarModule,
     SubjectsModule,
-    QuestionsModule
+    QuestionsModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

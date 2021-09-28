@@ -12,6 +12,7 @@
 }
 
 .linha:hover {
+  transition: background-color 400ms;
   background-color: lightgray;
 }
 
