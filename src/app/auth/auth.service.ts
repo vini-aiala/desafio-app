@@ -18,8 +18,15 @@ export class AuthService {
     return this.http
       .post(API + '/auth', {email, password}, {observe: "response"})
       .pipe(tap(res => {
-        const token = res.headers.get('Authorization') ?? ''
-        this.tokenService.store(token);
+        if (res.status == 200) {
+          const token = res.body?.toString() ?? ''
+          this.tokenService.store(token);
+        }
       }))
+  }
+
+  signup(name: string, email: string, password: string) : Observable<any> {
+    return this.http
+      .post(API + '/author', {name, email, password}, {observe: "response"})
   }
 }

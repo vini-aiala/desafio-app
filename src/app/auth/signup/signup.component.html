@@ -1,19 +1,19 @@
 <h1>Cadastro</h1>
 
-<form class="example-form">
+<form [formGroup]="signupForm" class="example-form" (submit)="signUp()" >
   <mat-form-field class="example-full-width" appearance="outline">
     <mat-label>Nome</mat-label>
-    <input matInput type="text" required autofocus>
+    <input formControlName="name" matInput type="text" name="name" required autofocus>
   </mat-form-field>
 
   <mat-form-field class="example-full-width" appearance="outline">
     <mat-label>E-mail</mat-label>
-    <input matInput type="email" required>
+    <input formControlName="email" matInput type="email" name="email" required>
   </mat-form-field>
 
   <mat-form-field class="example-full-width" appearance="outline">
     <mat-label>Senha</mat-label>
-    <input matInput type="password" required>
+    <input formControlName="password" matInput type="password" name="password" required>
   </mat-form-field>
 
   <button class="submit" type="submit">Cadastrar</button>

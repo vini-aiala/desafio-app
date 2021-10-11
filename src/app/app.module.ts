@@ -9,10 +9,14 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {SubjectsModule} from "./subjects/subjects.module";
 import {QuestionsModule} from "./questions/questions.module";
 import {AuthModule} from "./auth/auth.module";
+import { AnswersFormComponent } from './answers/answers-form/answers-form.component';
+import { AnswersListComponent } from './answers/answers-list/answers-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AnswersFormComponent,
+    AnswersListComponent
   ],
   imports: [
     BrowserModule,
