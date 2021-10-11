@@ -1,0 +1,52 @@
+.container {
+  width: 100%;
+}
+
+.tabela {
+  width: 100%;
+  border-spacing: 0 5px;
+}
+
+.linha {
+  transition: background-color 400ms;
+  cursor: pointer;
+}
+
+.linha:hover {
+  background-color: lightgray;
+}
+
+.nome {
+  border-left: 5px solid;
+}
+
+.categoria {
+  display: flex;
+  justify-content: flex-end;
+  border-right: solid lightgray 1px;
+}
+
+.item {
+  padding: 16px;
+  border-top: solid lightgray 1px;
+  border-bottom: solid lightgray 1px;
+}
+
+.INFRA_DEVOPS {
+  border-left-color: #c2c6e3;
+}
+.BACKEND {
+  border-left-color: #01b4bc;
+}
+.FRONTEND {
+  border-left-color: #fa8925;
+}
+.DATA {
+  border-left-color: #f6d51f;
+}
+.SCRIPTING {
+  border-left-color: #5fa55a;
+}
+.PROJECT_MANAGEMENT {
+  border-left-color: #fa5457;
+}
