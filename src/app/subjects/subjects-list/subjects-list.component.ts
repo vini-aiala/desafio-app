@@ -25,6 +25,10 @@ export class SubjectsListComponent implements OnInit {
       });
   }
 
+  redirect(path:string):void {
+    this.router.navigate([path])
+  }
+
   redirectSubj(id: number): void {
     this.router.navigate(["/subject/"+id])
   }

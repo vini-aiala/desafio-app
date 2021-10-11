@@ -36,6 +36,10 @@ export class QuestionsListComponent implements OnInit {
     this.getPage();
   }
 
+  redirect(path:string):void {
+    this.router.navigate([path])
+  }
+
   getPage() {
     return this.questionService
       .listQuestionsPage(this.id, this.pageIndex, this.pageSize)

@@ -32,6 +32,36 @@
   border-bottom: solid lightgray 1px;
 }
 
+.btn {
+  display: flex;
+  align-items: center;
+  margin: 0 0 16px;
+  padding: 7px;
+  font-weight: 500;
+  font-family: Roboto, serif;
+  color: #BA1D36;
+  background-color: white;
+  border: 0;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.icon {
+  margin-left: 5px;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn:hover {
+  text-shadow: 1px 0 1px #e9e9e9;
+  transition: text-shadow 0.5s;
+}
+
 .INFRA_DEVOPS {
   border-left-color: #c2c6e3;
 }
