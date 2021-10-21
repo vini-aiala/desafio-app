@@ -36,8 +36,8 @@ export class QuestionsListComponent implements OnInit {
     this.getPage();
   }
 
-  redirect(path:string):void {
-    this.router.navigate([path])
+  redirectNew(path:string):void {
+    this.router.navigate([path], { queryParams: { subjectId: this.id } })
   }
 
   getPage() {
@@ -50,7 +50,6 @@ export class QuestionsListComponent implements OnInit {
   }
 
   updatePage(pageEvent: PageEvent) {
-    console.log(pageEvent)
     this.pageSize = pageEvent.pageSize;
     this.pageIndex = pageEvent.pageIndex;
     this.getPage();

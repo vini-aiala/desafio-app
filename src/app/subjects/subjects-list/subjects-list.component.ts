@@ -3,6 +3,7 @@ import {SubjectService} from "../subject.service";
 import {Subject} from "../subject";
 import {Router} from "@angular/router"
 
+
 @Component({
   selector: 'app-list',
   templateUrl: './subjects-list.component.html',

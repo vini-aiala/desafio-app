@@ -1,3 +1,10 @@
-<h1>{{question?.title}}</h1>
-<!--<h2>{{question?.author.name}}</h2>-->
-<p>{{question?.text}}</p>
+<div class="card">
+  <h1>{{question?.title}}</h1>
+  <p>{{question?.text}}</p>
+  <span class="author-info">Perguntado por: {{question?.author?.name}}</span>
+</div>
+
+<app-answers-list></app-answers-list>
+
+<app-answers-form></app-answers-form>
+

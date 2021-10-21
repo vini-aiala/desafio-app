@@ -11,12 +11,11 @@ import {QuestionsModule} from "./questions/questions.module";
 import {AuthModule} from "./auth/auth.module";
 import { AnswersFormComponent } from './answers/answers-form/answers-form.component';
 import { AnswersListComponent } from './answers/answers-list/answers-list.component';
+import {AnswersModule} from "./answers/answers.module";
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AnswersFormComponent,
-    AnswersListComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +25,8 @@ import { AnswersListComponent } from './answers/answers-list/answers-list.compon
     MatToolbarModule,
     SubjectsModule,
     QuestionsModule,
-    AuthModule
+    AuthModule,
+    AnswersModule
   ],
   providers: [],
   bootstrap: [AppComponent]
