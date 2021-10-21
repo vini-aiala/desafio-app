@@ -1,0 +1,15 @@
+<h1>Nova questão</h1>
+
+<form [formGroup]="questionForm" class="example-form" (submit)="submit()" >
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Título</mat-label>
+    <input formControlName="title" matInput type="text" name="title" required autofocus>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Descrição</mat-label>
+    <textarea formControlName="text" matInput type="text" name="text" required></textarea>
+  </mat-form-field>
+
+  <button class="submit" type="submit">Cadastrar</button>
+</form>

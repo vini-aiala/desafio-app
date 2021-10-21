@@ -1,10 +1,11 @@
 import {Subject} from "../subjects/subject";
+import {Author} from "../authors/author";
 
 export interface Question {
   id:number;
   title:string;
   text:string;
   status:string;
-  author:Object;
+  author:Author;
   subject:Subject;
 }

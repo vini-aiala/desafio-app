@@ -9,6 +9,9 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {SubjectsModule} from "./subjects/subjects.module";
 import {QuestionsModule} from "./questions/questions.module";
 import {AuthModule} from "./auth/auth.module";
+import { AnswersFormComponent } from './answers/answers-form/answers-form.component';
+import { AnswersListComponent } from './answers/answers-list/answers-list.component';
+import {AnswersModule} from "./answers/answers.module";
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import {AuthModule} from "./auth/auth.module";
     MatToolbarModule,
     SubjectsModule,
     QuestionsModule,
-    AuthModule
+    AuthModule,
+    AnswersModule
   ],
   providers: [],
   bootstrap: [AppComponent]

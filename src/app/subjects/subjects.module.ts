@@ -7,10 +7,12 @@ import {MatChipsModule} from "@angular/material/chips";
 import {HttpClientModule} from "@angular/common/http";
 import {CategoriesModule} from "../categories/categories.module";
 import {MatTableModule} from "@angular/material/table";
+import { SubjectsFormComponent } from './subjects-form/subjects-form.component';
 
 @NgModule({
   declarations: [
-    SubjectsListComponent
+    SubjectsListComponent,
+    SubjectsFormComponent
   ],
   imports: [
     CommonModule,

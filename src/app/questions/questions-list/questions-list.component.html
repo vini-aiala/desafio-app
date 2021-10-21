@@ -1,5 +1,12 @@
 <div class="container">
-  <h1>Questões</h1>
+  <div class="title-container">
+    <h1>Questões</h1>
+    <button class="btn" type="button" (click)="redirectNew('/question/new')">
+      Nova questão
+      <mat-icon class="icon">add</mat-icon>
+    </button>
+  </div>
+
   <app-paginator [tamanho]="totalElements" [tam_pag]="pageSize" [pag]="pageIndex" (onPageChange)="updatePage($event)"></app-paginator>
   <table class="tabela">
     <tr class="linha" (click)="redirectQuest(question.id)" *ngFor="let question of questions" >

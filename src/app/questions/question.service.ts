@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpParams} from "@angular/common/http";
+import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
 import {Question} from "./question";
 import {QuestionPage} from "./question-page";
+import {TokenService} from "../auth/token.service";
 
 const API = 'http://localhost:8080'
 
@@ -11,8 +12,14 @@ const API = 'http://localhost:8080'
 export class QuestionService {
 
   constructor(
+    private tokenService: TokenService,
     private http: HttpClient
   ) { }
+
+  private headers = new HttpHeaders({
+      Authorization: 'Bearer ' + this.tokenService.getToken() ?? ''
+    }
+  )
 
   listQuestionsPage(id:number, page:number, size:number) {
     // return this.http.get(API + `/question`,  {params: {subjectId: 3, page: 0, size: 2}})
@@ -21,5 +28,9 @@ export class QuestionService {
 
   getQuestionById(id:number) {
     return this.http.get<Question>(`${API}/question/${id}`)
+  }
+
+  submitQuestion(title:string, text:string, userId:number, subjectId:number){
+    return this.http.post<Question>(API + '/question', {title, text, userId, subjectId}, {observe: "response", headers: this.headers})
   }
 }

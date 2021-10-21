@@ -3,6 +3,7 @@ import {SubjectService} from "../subject.service";
 import {Subject} from "../subject";
 import {Router} from "@angular/router"
 
+
 @Component({
   selector: 'app-list',
   templateUrl: './subjects-list.component.html',
@@ -23,6 +24,10 @@ export class SubjectsListComponent implements OnInit {
       .subscribe( subjects => {
         this.subjects = subjects
       });
+  }
+
+  redirect(path:string):void {
+    this.router.navigate([path])
   }
 
   redirectSubj(id: number): void {
