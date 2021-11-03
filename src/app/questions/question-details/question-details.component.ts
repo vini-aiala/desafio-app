@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {QuestionService} from "../question.service";
 import {Question} from "../question";
+import {AnswersListComponent} from "../../answers/answers-list/answers-list.component";
 
 @Component({
   selector: 'app-question-details',
@@ -16,6 +17,9 @@ export class QuestionDetailsComponent implements OnInit {
     private questionService: QuestionService
   ) { }
 
+  @ViewChild(AnswersListComponent)
+  private answersList!: AnswersListComponent;
+
   id:number = this.activatedRoute.snapshot.params.question;
   question: Question | undefined
 
@@ -23,6 +27,10 @@ export class QuestionDetailsComponent implements OnInit {
     this.questionService
       .getQuestionById(this.id)
       .subscribe(question => this.question = question)
+  }
+
+  updateAnswers() : void {
+    this.answersList.getList();
   }
 
 }
