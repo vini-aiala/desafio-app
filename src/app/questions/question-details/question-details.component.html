@@ -1,0 +1,10 @@
+<div class="card">
+  <h1>{{question?.title}}</h1>
+  <p>{{question?.text}}</p>
+  <span class="author-info">Perguntado por: {{question?.author?.name}}</span>
+</div>
+
+<app-answers-list></app-answers-list>
+
+<app-answers-form (updateEvent)="updateAnswers()"></app-answers-form>
+

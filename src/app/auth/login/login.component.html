@@ -1,0 +1,17 @@
+<h1>Login</h1>
+
+<form [formGroup]="loginForm" class="example-form" (submit)="login()" >
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>E-mail</mat-label>
+    <input formControlName="email" matInput type="email" required autofocus>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Senha</mat-label>
+    <input formControlName="password" matInput type="password" required>
+  </mat-form-field>
+
+  <button class="submit" type="submit">Entrar</button>
+</form>
+
+<p class="text-cta">Ainda não é um usuário? <a href="/signup">Cadastre-se</a></p>

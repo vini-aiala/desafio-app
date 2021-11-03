@@ -1,0 +1,8 @@
+<form [formGroup]="answerForm" class="example-form" (submit)="submit()" >
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Resposta</mat-label>
+    <textarea formControlName="text" matInput type="text" name="text" required></textarea>
+  </mat-form-field>
+
+  <button class="submit" type="submit">Responder</button>
+</form>

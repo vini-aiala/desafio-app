@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="title-container">
+    <h1>Assuntos</h1>
+<!--    <button class="btn" type="button" (click)="redirect('/subject/new')">-->
+<!--      Novo assunto-->
+<!--      <mat-icon class="icon">add</mat-icon>-->
+<!--    </button>-->
+  </div>
+  <table class="tabela">
+    <tr class="linha" (click)="redirectSubj(subject.id)" *ngFor="let subject of subjects" >
+      <td class="item nome {{subject.category}}">{{subject.name}}</td>
+      <td class="item categoria"><app-chip [category]="subject.category"></app-chip></td>
+    </tr>
+  </table>
+</div>

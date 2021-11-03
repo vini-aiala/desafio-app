@@ -1,0 +1,40 @@
+.container {
+  height: 64px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 16px;
+  background-color: #BA1D36;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.btn-auth {
+  margin: 0 10px;
+  padding: 7px;
+  background-color: #BA1D36;
+  font-weight: 500;
+  font-family: Roboto, serif;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-auth:hover {
+  background-color: #AA0D26;
+}
+
+.title {
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+}
+
+.user-name {
+  font-weight: 500;
+  color: white;
+}

@@ -1,0 +1,22 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.submit {
+  color: white;
+  background-color: #830012;
+  border-radius: 5px;
+  border: 0;
+  font-size: 14px;
+  line-height: 36px;
+  padding: 0 16px;
+  font-weight: 500;
+  font-family: Roboto, sans-serif;
+  cursor: pointer;
+}

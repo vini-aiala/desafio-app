@@ -1,0 +1,15 @@
+<div class="container">
+  <span class="title" (click)="redirect('/')">Fórum de dúvidas</span>
+  <div *ngIf="author$ | async as author; else login">
+    <span class="user-name">{{author.name}}</span>
+    <button class="btn-auth" type="button" (click)="logout()">Sair</button>
+  </div>
+
+</div>
+
+<ng-template #login>
+  <div class="button-container">
+    <button class="btn-auth" type="button" (click)="redirect('/login')">Entrar</button>
+    <button class="btn-auth" type="button" (click)="redirect('/signup')">Cadastrar</button>
+  </div>
+</ng-template>
