@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { EventEmitter } from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
 import {FormBuilder} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import {TokenService} from "../../auth/token.service";
@@ -17,6 +18,8 @@ export class AnswersFormComponent implements OnInit {
   answerForm = this.formBuilder.group({
     text: [''],
   });
+
+  @Output() updateEvent = new EventEmitter();
 
   constructor(private formBuilder: FormBuilder,
               private activatedRoute: ActivatedRoute,
@@ -39,7 +42,9 @@ export class AnswersFormComponent implements OnInit {
     this.answerService
       .submitAnswer(text, authorId, questionId)
       .subscribe(
-        response => {},
+        response => {
+          this.updateEvent.emit()
+        },
         error => {
           if (error.status === 403) {
             this.tokenService.remove()
